@@ -1,0 +1,72 @@
+version: '3.7'
+
+services:
+  app:
+    build: docker/php-fpm
+    container_name: app
+    environment:
+      TZ: Europe/London
+      XDEBUG_REMOTE_HOST: 172.18.0.1
+      XDEBUG_REMOTE_PORT: 9003
+    ports:
+      - "8000:8000"
+      - "2222:22"
+    volumes:
+      - ./:/var/www/app
+    networks:
+      - app
+  server:
+    build: docker/nginx
+    container_name: server
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www/app
+    networks:
+      app:
+        aliases:
+          - app.local
+          - api.app.local
+  db:
+    image: "postgres:13.9"
+    container_name: db
+    restart: always
+    environment:
+      - TZ=Europe/London
+      - PGTZ=Europe/London
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    ports:
+      - "5432:5432"
+    networks:
+      - app
+  selenium:
+    image: "selenium/standalone-chrome-debug"
+    container_name: selenium
+    ports:
+      - 4444:4444
+      - 5900:5900
+    networks:
+      - app
+  maildev:
+    image: maildev/maildev
+    container_name: maildev
+    command: bin/maildev --web 80 --smtp 25 --hide-extensions STARTTLS
+    ports:
+      - "1080:80"
+    networks:
+      - app
+  cypress:
+    image: "cypress/included:12.1.0"
+    container_name: cypress
+    working_dir: /e2e
+    environment:
+      - DISPLAY
+    volumes:
+      - ./:/e2e
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    networks:
+      - app
+networks:
+  app:
+    driver: bridge

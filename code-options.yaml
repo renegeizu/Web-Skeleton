@@ -1,0 +1,9 @@
+trailing-comma-in-function-calls: true
+flexible-heredoc-and-nowdoc-syntax: true
+8.1-null-coalescing-assignment-operator: true
+8.1-arrow-functions: true
+8.1-arrow-functions-force-simplification: true
+8.1-typed-properties: true
+8.1-typed-properties-enforce-comment-types: true
+doctrine-annotations: true
+force-strict-types: true

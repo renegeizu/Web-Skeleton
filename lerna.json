@@ -1,0 +1,10 @@
+{
+  "packages": [
+    "component",
+    "asset",
+    "apps/frontend"
+  ],
+  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true
+}

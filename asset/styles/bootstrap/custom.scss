@@ -1,0 +1,14 @@
+// Required
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+// Customization
+$theme-colors: (
+  "lunchbox": $lunchbox,
+  "cloud": $cloud,
+  "bubblegum": $bubblegum,
+  "jumper": $jumper,
+  "playground": $playground,
+);
+// Utilities & Components
+@import "~bootstrap";

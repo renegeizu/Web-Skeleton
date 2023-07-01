@@ -1,0 +1,26 @@
+// Colors
+$lunchbox: #3c3839;
+$cloud: #bab0b6;
+$bubblegum: #ea5167;
+$jumper: #0b7ea1;
+$playground: #55a1cf;
+$opacity-base: 0.15;
+// Sizes
+$small: 0.95rem;
+// Padding
+$p-y-base: 1.5rem;
+$p-x-base: 2.5rem;
+$p-y-sm: 1rem;
+$p-x-sm: 1.5rem;
+// Background Mixin
+@mixin background-opacity($color, $opacity: 1) {
+  background-color: rgba($color, $opacity) !important;
+}
+// Transition Mixin
+@mixin transition($property: all, $duration: 450ms, $timing: ease-in-out) {
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  -ms-transition: $property $duration $timing;
+  -o-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+}

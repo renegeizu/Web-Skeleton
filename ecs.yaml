@@ -1,0 +1,12 @@
+imports:
+  - { resource: 'vendor/sylius-labs/coding-standard/easy-coding-standard.yml' }
+parameters:
+  sets:
+    - 'clean-code'
+    - 'dead-code'
+    - 'php81'
+    - 'psr12'
+    - 'symfony'
+  paths:
+    - 'core/src'
+    - 'apps/api/src'

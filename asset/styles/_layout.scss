@@ -1,0 +1,23 @@
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+// App
+.App {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+  color: $lunchbox;
+}
+// Global Classes
+.container--padding {
+  padding: $p-y-sm $p-x-sm;
+  @media (min-width: map-get($grid-breakpoints, lg)) {
+    padding: $p-y-base $p-x-base;
+  }
+}
+// Text Size
+.text-base {
+  font-size: 16px;
+}
+.text-small {
+  font-size: $small;
+}

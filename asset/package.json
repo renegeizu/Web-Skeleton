@@ -1,0 +1,14 @@
+{
+  "name": "@app/asset",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@mdi/font": "^7.2.96",
+    "@zendeskgarden/react-pagination": "^8.67.0",
+    "@zendeskgarden/react-theming": "^8.67.0",
+    "bootstrap": "^5.2.3",
+    "hamburgers": "^1.2.1",
+    "pretty-checkbox": "^3.0.3",
+    "tippy.js": "^6.3.7"
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "type": "project",
+    "require-dev": {
+        "symplify/easy-coding-standard": "^11.3.4",
+        "sylius-labs/coding-standard": "^4.3.1"
+    },
+    "require": {},
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": false
+        }
+    }
+}

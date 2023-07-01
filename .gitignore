@@ -1,0 +1,13 @@
+## Root
+node_modules/
+vendor/
+
+## Apps
+apps/api/vendor/
+apps/frontend/node_modules/
+
+## Component
+component/node_modules/
+
+## Core
+core/vendor/

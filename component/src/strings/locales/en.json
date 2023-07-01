@@ -1,0 +1,19 @@
+{
+  "errors": {
+    "error": "Error",
+    "general": "There was an error."
+  },
+  "global": {
+    "loading": "Loading..."
+  },
+  "pages": {
+    "todo": {
+      "newTodoInput": {
+        "inputPlaceholder": "What needs to be done?"
+      },
+      "todoList": {
+        "title": "You have {{number}} pending task{{plural}} TODO"
+      }
+    }
+  }
+}

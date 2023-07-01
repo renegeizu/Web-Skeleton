@@ -1,0 +1,12 @@
+default:
+  suites:
+    api_attainment:
+      paths: [ "%paths.base%/../../features" ]
+      contexts:
+        - App\Api\Behat\Context\Hook\DoctrineORMContext
+        - behatch:context:rest
+        - behatch:context:json
+        - App\Api\Behat\Context\Api\TodoContext
+
+      filters:
+        tags: "@todoList && @api"

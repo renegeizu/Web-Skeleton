@@ -1,0 +1,66 @@
+{
+  "name": "project",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "component",
+      "asset",
+      "apps/frontend"
+    ],
+    "nohoist": [
+      "apps/**/webpack-dev-server",
+      "**/babel-loader",
+      "**/babel-jest"
+    ]
+  },
+  "scripts": {
+    "start:frontend": "yarn workspace @app/frontend start",
+    "build:frontend": "yarn workspace @app/frontend build",
+    "build:test": "yarn workspace @app/frontend build-test",
+    "test": "yarn workspace @app/component test",
+    "start:test": "yarn workspace @app/frontend test",
+    "open:cypress": "start-test start:test http://localhost:8080 '/usr/local/bin/cypress open --project /e2e/apps/frontend'",
+    "run:cypress": "start-test start:test http://localhost:8080 '/usr/local/bin/cypress run --project /e2e/apps/frontend'",
+    "eslint": "./node_modules/.bin/eslint component/src apps/frontend/src --fix",
+    "format": "./node_modules/.bin/prettier --write asset/styles/**/*.{css,scss} component/{src,test}/**/*.{js,ts,tsx} apps/frontend/src/**/*.{js,ts,tsx}"
+  },
+  "devDependencies": {
+    "@types/consola": "^2.2.5",
+    "@types/react": "^17.0.14",
+    "eslint-plugin-cypress": "^2.11.3",
+    "husky": "^8.0.3",
+    "lerna": "^3.21.0",
+    "start-server-and-test": "^1.11.6"
+  },
+  "dependencies": {
+    "consola": "^2.15.3",
+    "lint-staged": "^10.2.6",
+    "prettier": "^2.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run format && yarn run eslint",
+      "pre-push": "make test"
+    }
+  },
+  "lint-staged": {
+    "asset/styles/**/*.{css,scss}": [
+      "prettier --write"
+    ],
+    "component/{src,test}/**/*.{js, ts, tsx}": [
+      "prettier --write"
+    ],
+    "apps/frontend/src/**/*.{js, ts, tsx}": [
+      "prettier --write"
+    ],
+    "core/src/**/*.php": [
+      "vendor/bin/ecs check --fix"
+    ],
+    "apps/api/src/**/*.php": [
+      "vendor/bin/ecs check --fix"
+    ]
+  },
+  "prettier": {
+    "printWidth": 120
+  }
+}

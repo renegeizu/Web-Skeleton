@@ -1,0 +1,47 @@
+{
+  "name": "@app/frontend",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@app/asset": "^1.0.0",
+    "@app/component": "^1.0.0",
+    "@tailwindcss/postcss7-compat": "^2.2.17",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "autoprefixer": "^10.4.14",
+    "axios": "^1.4.0",
+    "node-sass": "^8.0.0",
+    "react": "^18.2.0",
+    "react-app-polyfill": "^3.0.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "build-test": "env NODE_ENV=test react-app-rewired build",
+    "test": "env NODE_ENV=test react-app-rewired start",
+    "eject": "react-app-rewired eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "ie 11",
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "customize-cra": "^1.0.0",
+    "cypress": "^12.12.0",
+    "get-yarn-workspaces": "^1.0.2",
+    "react-app-rewired": "^2.2.1",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  }
+}

@@ -1,0 +1,9 @@
+framework:
+    test: true
+    session:
+        storage_id: session.storage.mock_file
+
+    http_client:
+        scoped_clients:
+            api.client:
+                base_uri: 'http://reporting.local/'
