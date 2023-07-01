@@ -1,5 +1,5 @@
 {
-    "name": "project/app-core",
+    "name": "appname/app-core",
     "description": "App core",
     "type": "project",
     "require": {

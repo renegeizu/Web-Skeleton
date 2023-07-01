@@ -1,5 +1,5 @@
 {
-    "name": "project/app",
+    "name": "appname/app",
     "type": "project",
     "license": "proprietary",
     "repositories": [
@@ -19,7 +19,7 @@
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^2.15",
         "friendsofsymfony/rest-bundle": "^3.5.0",
-        "project/app-core": "dev-main",
+        "appname/app-core": "dev-main",
         "nelmio/api-doc-bundle": "^4.11.1",
         "nelmio/cors-bundle": "^2.3.1",
         "phpdocumentor/reflection-docblock": "^5.3",

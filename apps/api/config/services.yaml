@@ -32,10 +32,10 @@ services:
         tags: ['controller.service_arguments']
 
     App\Application\:
-        resource: '../vendor/project/app-core/src/Application/*'
+        resource: '../vendor/appname/app-core/src/Application/*'
 
     App\Domain\:
-      resource: '../vendor/project/app-core/src/Domain/*'
+      resource: '../vendor/appname/app-core/src/Domain/*'
 
     League\Fractal\Serializer\DataArraySerializer:
         class: League\Fractal\Serializer\DataArraySerializer

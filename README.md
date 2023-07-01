@@ -18,6 +18,10 @@ From your local environment you could go to:
 
 # Deployment
 
+## Application Name
+
+To change the name of the app, search for "AppName" and replace it with the desired name.
+
 ## Frontend
 
 A script ready for AWS Amplify can be found in `amplify.yml`, it's configured to run the JS tests and build the React application.

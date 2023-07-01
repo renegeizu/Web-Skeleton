@@ -19,6 +19,6 @@ doctrine:
             app:
                 is_bundle: false
                 type: annotation
-                dir: '%kernel.project_dir%/vendor/project/app-core/src/Domain'
+                dir: '%kernel.project_dir%/vendor/appname/app-core/src/Domain'
                 prefix: 'App\Domain'
                 alias: app

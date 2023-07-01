@@ -1,6 +1,6 @@
 {
-  "short_name": "Project",
-  "name": "Project",
+  "short_name": "AppName",
+  "name": "AppName",
   "icons": [
     {
       "src": "favicon.ico",
