@@ -28,7 +28,7 @@ services:
           - app.local
           - api.app.local
   db:
-    image: "postgres:13.9"
+    image: "postgres:16.2"
     container_name: db
     restart: always
     environment:
@@ -57,7 +57,7 @@ services:
     networks:
       - app
   cypress:
-    image: "cypress/included:12.1.0"
+    image: "cypress/included:13.6.6"
     container_name: cypress
     working_dir: /e2e
     environment:

@@ -1,8 +1,8 @@
-FROM php:8.2-fpm
+FROM php:8.3.3-fpm
 
 # Install Software
 RUN apt-get update && apt-get install -yq gnupg supervisor && \
-    curl -sL https://deb.nodesource.com/setup_19.x | bash - && \
+    curl -sL https://deb.nodesource.com/setup_20.x | bash - && \
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     apt-get update && apt-get install -yq libsodium-dev libpq-dev libicu-dev git vim libzip-dev zlib1g-dev zip inetutils-ping nodejs yarn wget python3 python-is-python3 && \
